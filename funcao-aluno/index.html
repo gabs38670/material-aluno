@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funções em JavaScript — Senac Largo Treze</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <div class="topo-conteudo">
+      <p class="eyebrow">Senac Largo Treze · Santo Amaro</p>
+      <h1>Funções em JavaScript</h1>
+      <p class="sub">O que é uma função e suas características, do zero — em sete passos.</p>
+    </div>
+  </header>
+
+  <nav class="menu" aria-label="Etapas da aula">
+    <div class="menu-conteudo">
+      <a href="#basica">1 · O que é</a>
+      <a href="#parametro">2 · Parâmetro</a>
+      <a href="#retorno">3 · Retorno</a>
+      <a href="#reutilizar">4 · Reutilizar</a>
+      <a href="#decisao">5 · Decisão</a>
+      <a href="#compor">6 · Compor</a>
+      <a href="#lista">7 · Lista</a>
+      <a href="#projeto">Projeto</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="bloco intro">
+      <p class="aviso">
+        A estrutura é o <strong>HTML</strong>, a aparência é o <strong>CSS</strong>, e quem cria
+        e chama as funções é o <strong>JavaScript</strong> — que você escreve no
+        <code>script.js</code>. Abra o console com <kbd>F12</kbd> para acompanhar.
+      </p>
+    </section>
+
+    <!-- 1 -->
+    <section class="bloco" id="basica">
+      <p class="eyebrow">Etapa 1 · Nível básico</p>
+      <h2>O que é uma função</h2>
+      <p>Um <strong>bloco de código com nome</strong>. Você escreve a tarefa uma vez e manda
+        executar quando quiser — isso se chama <strong>chamar</strong> a função.</p>
+      <ul class="caracteristicas">
+        <li><strong>Nome</strong><small>como você a chama</small></li>
+        <li><strong>Corpo</strong><small>o código entre { }</small></li>
+        <li><strong>Chamada</strong><small>nome() executa</small></li>
+      </ul>
+      <pre class="saida" id="saida1">— aguardando o JavaScript —</pre>
+    </section>
+
+    <!-- 2 -->
+    <section class="bloco" id="parametro">
+      <p class="eyebrow">Etapa 2 · Entrada</p>
+      <h2>Parâmetro</h2>
+      <p>Um <strong>parâmetro</strong> é uma entrada: um valor que você envia para a função
+        trabalhar. A mesma função responde diferente conforme o que recebe.</p>
+      <pre class="saida" id="saida2">— aguardando o JavaScript —</pre>
+    </section>
+
+    <!-- 3 -->
+    <section class="bloco" id="retorno">
+      <p class="eyebrow">Etapa 3 · Saída</p>
+      <h2>Retorno com <code>return</code></h2>
+      <p>Com <code>return</code> a função <strong>devolve</strong> um valor para quem chamou.
+        Esse valor pode ser guardado numa variável e reutilizado.</p>
+      <pre class="saida" id="saida3">— aguardando o JavaScript —</pre>
+    </section>
+
+    <!-- 4 -->
+    <section class="bloco" id="reutilizar">
+      <p class="eyebrow">Etapa 4 · Reuso</p>
+      <h2>Reutilização</h2>
+      <p>Chamar a <strong>mesma</strong> função com valores diferentes, sem repetir código.
+        Se a regra muda, muda só num lugar.</p>
+      <pre class="saida" id="saida4">— aguardando o JavaScript —</pre>
+    </section>
+
+    <!-- 5 -->
+    <section class="bloco" id="decisao">
+      <p class="eyebrow">Etapa 5 · Nível intermediário</p>
+      <h2>Decisão dentro da função</h2>
+      <p>Uma função pode <strong>decidir</strong> o que devolver usando <code>if</code> /
+        <code>else</code>. A resposta depende da entrada.</p>
+      <pre class="saida" id="saida5">— aguardando o JavaScript —</pre>
+    </section>
+
+    <!-- 6 -->
+    <section class="bloco" id="compor">
+      <p class="eyebrow">Etapa 6 · Composição</p>
+      <h2>Uma função que usa outra</h2>
+      <p>Funções se combinam: uma função pode <strong>chamar outra</strong> dentro dela.
+        É assim que problemas grandes viram pedaços pequenos.</p>
+      <pre class="saida" id="saida6">— aguardando o JavaScript —</pre>
+    </section>
+
+    <!-- 7 -->
+    <section class="bloco" id="lista">
+      <p class="eyebrow">Etapa 7 · Nível avançado</p>
+      <h2>Função que processa uma lista</h2>
+      <p>Uma função pode receber um <strong>array</strong>, percorrê-lo e devolver um
+        resultado — juntando tudo o que você já aprendeu.</p>
+      <pre class="saida" id="saida7">— aguardando o JavaScript —</pre>
+    </section>
+
+    <!-- PROJETO -->
+    <section class="bloco destaque" id="projeto">
+      <p class="eyebrow">Projeto final</p>
+      <h2>Calculadora com três funções</h2>
+      <p>Digite dois números e escolha a operação. Cada botão chama uma função diferente
+        (<code>somar</code>, <code>subtrair</code>, <code>multiplicar</code>) que devolve o
+        resultado com <code>return</code>.</p>
+
+      <div class="form-calc">
+        <label for="num1">Primeiro número
+          <input type="number" id="num1" name="num1" placeholder="Ex: 7"></label>
+        <label for="num2">Segundo número
+          <input type="number" id="num2" name="num2" placeholder="Ex: 5"></label>
+      </div>
+      <div class="botoes">
+        <button type="button" id="btn-somar">Somar</button>
+        <button type="button" id="btn-subtrair" class="secundario">Subtrair</button>
+        <button type="button" id="btn-multiplicar" class="secundario">Multiplicar</button>
+      </div>
+
+      <pre class="saida" id="resultado">O resultado aparece aqui…</pre>
+    </section>
+
+    <!-- FECHAMENTO -->
+    <section class="bloco">
+      <p class="eyebrow">Fechamento</p>
+      <h2>As características de uma função</h2>
+      <table class="tabela">
+        <tr><th>Característica</th><th>Em uma frase</th></tr>
+        <tr><td>Nome</td><td>Como você identifica e chama a função.</td></tr>
+        <tr><td>Parâmetro</td><td>A entrada: valor que a função recebe.</td></tr>
+        <tr><td>Argumento</td><td>O valor real passado na chamada, ex: <code>somar(7, 5)</code>.</td></tr>
+        <tr><td>Corpo</td><td>O código entre chaves que faz a tarefa.</td></tr>
+        <tr><td>Retorno</td><td>A saída devolvida com <code>return</code>.</td></tr>
+        <tr><td>Reutilização</td><td>Chamar a mesma função quantas vezes precisar.</td></tr>
+      </table>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <p>Funções em JavaScript · Senac Largo Treze · Santo Amaro, São Paulo</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
