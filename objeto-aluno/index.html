@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objetos em JavaScript — Senac Largo Treze</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <div class="topo-conteudo">
+      <p class="eyebrow">Senac Largo Treze · Santo Amaro</p>
+      <h1>Objetos em JavaScript</h1>
+      <p class="sub">Como agrupar dados que andam juntos, do zero — em sete passos.</p>
+    </div>
+  </header>
+
+  <nav class="menu" aria-label="Etapas da aula">
+    <div class="menu-conteudo">
+      <a href="#oquee">1 · O que é</a>
+      <a href="#alterar">2 · Alterar</a>
+      <a href="#comfuncao">3 · Com função</a>
+      <a href="#retorno">4 · Return</a>
+      <a href="#decisao">5 · Decisão</a>
+      <a href="#fabrica">6 · Fábrica</a>
+      <a href="#lista">7 · Lista</a>
+      <a href="#projeto">Projeto</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="bloco intro">
+      <p class="aviso">
+        A estrutura é o <strong>HTML</strong>, a aparência é o <strong>CSS</strong> — os dois já
+        estão prontos. Quem cria e usa os objetos é o <strong>JavaScript</strong>, que você
+        escreve no <code>script.js</code>. Abra o console com <kbd>F12</kbd> para acompanhar.
+      </p>
+    </section>
+
+    <!-- 1 -->
+    <section class="bloco" id="oquee">
+      <p class="eyebrow">Etapa 1 · Nível básico</p>
+      <h2>O que é um objeto</h2>
+      <p>Pense na sua <strong>ficha de matrícula</strong> do Senac: nome, curso, unidade — vários
+        dados de uma coisa só, todos juntos. Um objeto é isso: um grupo de dados onde cada um
+        tem uma <strong>etiqueta</strong> (a propriedade) e um <strong>valor</strong>.</p>
+      <ul class="caracteristicas">
+        <li><strong>Propriedade</strong><small>a etiqueta do dado</small></li>
+        <li><strong>Valor</strong><small>o dado em si</small></li>
+        <li><strong>Ponto</strong><small>objeto.propriedade lê</small></li>
+      </ul>
+      <pre class="saida" id="saida1">— aguardando o JavaScript —</pre>
+    </section>
+
+    <!-- 2 -->
+    <section class="bloco" id="alterar">
+      <p class="eyebrow">Etapa 2 · Mexer no objeto</p>
+      <h2>Alterar e adicionar</h2>
+      <p>Um celular na vitrine do Largo Treze entra em <strong>promoção</strong>: o preço muda,
+        mas é o mesmo celular. Com o <code>=</code> você <strong>troca</strong> o valor de uma
+        propriedade — e também pode <strong>criar</strong> uma propriedade nova depois do objeto pronto.</p>
+      <pre class="saida" id="saida2">— aguardando o JavaScript —</pre>
+    </section>
+
+    <!-- 3 -->
+    <section class="bloco" id="comfuncao">
+      <p class="eyebrow">Etapa 3 · Objeto + função</p>
+      <h2>O objeto viaja inteiro</h2>
+      <p>Em vez de mandar nome, curso e unidade separados, você manda a <strong>ficha
+        inteira</strong> para a função — e dentro dela lê o que precisar com o ponto.
+        Um parâmetro só, todos os dados juntos.</p>
+      <pre class="saida" id="saida3">— aguardando o JavaScript —</pre>
+    </section>
+
+    <!-- 4 -->
+    <section class="bloco" id="retorno">
+      <p class="eyebrow">Etapa 4 · Saída</p>
+      <h2>Função que devolve com <code>return</code></h2>
+      <p>Igual à aula de funções: em vez de só mostrar, a função pode <strong>devolver</strong>
+        um texto montado com os dados do objeto — o crachá pronto para usar onde você quiser.</p>
+      <pre class="saida" id="saida4">— aguardando o JavaScript —</pre>
+    </section>
+
+    <!-- 5 -->
+    <section class="bloco" id="decisao">
+      <p class="eyebrow">Etapa 5 · Nível intermediário</p>
+      <h2>Decisão com os dados do objeto</h2>
+      <p>No busão do Terminal Santo Amaro, estudante paga meia. A função olha o objeto e
+        <strong>decide</strong> com <code>if</code> / <code>else</code>: a resposta depende
+        dos dados de quem chegou.</p>
+      <pre class="saida" id="saida5">— aguardando o JavaScript —</pre>
+    </section>
+
+    <!-- 6 -->
+    <section class="bloco" id="fabrica">
+      <p class="eyebrow">Etapa 6 · Fábrica</p>
+      <h2>Função que fabrica objetos</h2>
+      <p>A barraca da feira tem dezenas de produtos. Escrever um objeto na mão para cada um?
+        Não — uma função <strong>recebe os dados e devolve o objeto pronto</strong>.
+        É função + <code>return</code> + objeto, tudo junto.</p>
+      <pre class="saida" id="saida6">— aguardando o JavaScript —</pre>
+    </section>
+
+    <!-- 7 -->
+    <section class="bloco" id="lista">
+      <p class="eyebrow">Etapa 7 · Nível avançado</p>
+      <h2>Lista de objetos</h2>
+      <p>O pedido da lanchonete é uma <strong>lista de objetos</strong>: cada item tem nome e
+        preço. Percorra a lista com <code>for</code> e some os preços — é assim que um
+        carrinho de compras calcula o total.</p>
+      <pre class="saida" id="saida7">— aguardando o JavaScript —</pre>
+    </section>
+
+    <!-- PROJETO -->
+    <section class="bloco destaque" id="projeto">
+      <p class="eyebrow">Projeto final</p>
+      <h2>Crachá do curso</h2>
+      <p>Digite um nome e uma idade e clique no botão. O JavaScript <strong>fabrica um
+        objeto</strong> com os dados, monta o crachá com uma função e ainda
+        <strong>decide</strong> se a pessoa paga meia no transporte.</p>
+
+      <div class="form-calc">
+        <label for="nome">Nome
+          <input type="text" id="nome" name="nome" placeholder="Ex: Jhonatan"></label>
+        <label for="idade">Idade
+          <input type="number" id="idade" name="idade" placeholder="Ex: 19"></label>
+      </div>
+      <div class="botoes">
+        <button type="button" id="btn-criar">Criar crachá</button>
+      </div>
+
+      <pre class="saida" id="resultado">O crachá aparece aqui…</pre>
+    </section>
+
+    <!-- FECHAMENTO -->
+    <section class="bloco">
+      <p class="eyebrow">Fechamento</p>
+      <h2>O vocabulário dos objetos</h2>
+      <table class="tabela">
+        <tr><th>Termo</th><th>Em uma frase</th></tr>
+        <tr><td>Objeto</td><td>Grupo de dados que andam juntos, entre <code>{ }</code>.</td></tr>
+        <tr><td>Propriedade</td><td>A etiqueta de um dado, ex: <code>nome</code>, <code>preco</code>.</td></tr>
+        <tr><td>Valor</td><td>O dado em si, ex: <code>"Maria"</code>, <code>8</code>.</td></tr>
+        <tr><td>Ponto</td><td>Lê ou troca um dado: <code>objeto.propriedade</code>.</td></tr>
+        <tr><td>Fábrica</td><td>Função que recebe dados e devolve (<code>return</code>) um objeto pronto.</td></tr>
+        <tr><td>Método</td><td>Função guardada dentro do objeto — <code>console.log</code> é um!</td></tr>
+      </table>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <p>Objetos em JavaScript · Senac Largo Treze · Santo Amaro, São Paulo</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
