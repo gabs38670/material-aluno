@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON e localStorage — Senac Largo Treze</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <div class="topo-conteudo">
+      <p class="eyebrow">Senac Largo Treze · Santo Amaro</p>
+      <h1>JSON e localStorage</h1>
+      <p class="sub">Como um app lembra de você depois que a página fecha — em sete passos.</p>
+    </div>
+  </header>
+
+  <nav class="menu" aria-label="Etapas da aula">
+    <div class="menu-conteudo">
+      <a href="#stringify">1 · Vira texto</a>
+      <a href="#parse">2 · Vira objeto</a>
+      <a href="#guardar">3 · Guardar</a>
+      <a href="#ler">4 · Ler</a>
+      <a href="#objetosalvo">5 · Objeto salvo</a>
+      <a href="#nulo">6 · Null</a>
+      <a href="#lista">7 · Lista</a>
+      <a href="#projeto">Projeto</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="bloco intro">
+      <p class="aviso">
+        Até hoje, tudo que você criou <strong>morria no F5</strong>. Nesta aula isso acaba:
+        o <strong>localStorage</strong> guarda dados no computador do usuário — mas ele só
+        aceita <strong>texto</strong>. O <strong>JSON</strong> é o tradutor que transforma
+        objeto em texto e texto em objeto. Você escreve tudo no <code>script.js</code>.
+        Abra o console com <kbd>F12</kbd>.
+      </p>
+    </section>
+
+    <!-- 1 -->
+    <section class="bloco" id="stringify">
+      <p class="eyebrow">Etapa 1 · Nível básico</p>
+      <h2>Objeto vira texto — <code>JSON.stringify</code></h2>
+      <p>JSON é o objeto <strong>escrito como texto</strong>, no formato que viaja pela
+        internet: é assim que WhatsApp, iFood e o app do busão mandam dados. Repare nas
+        aspas nas etiquetas — é a marca registrada do JSON.</p>
+      <ul class="caracteristicas">
+        <li><strong>stringify</strong><small>objeto → texto</small></li>
+        <li><strong>parse</strong><small>texto → objeto</small></li>
+        <li><strong>localStorage</strong><small>onde o texto fica salvo</small></li>
+      </ul>
+      <pre class="saida" id="saida1">— aguardando o JavaScript —</pre>
+    </section>
+
+    <!-- 2 -->
+    <section class="bloco" id="parse">
+      <p class="eyebrow">Etapa 2 · O caminho de volta</p>
+      <h2>Texto vira objeto — <code>JSON.parse</code></h2>
+      <p>Um texto JSON chegou "da internet". Enquanto for texto, o ponto não funciona.
+        O <code>JSON.parse</code> devolve o <strong>objeto de verdade</strong> — e aí
+        <code>obj.nome</code> volta a funcionar.</p>
+      <pre class="saida" id="saida2">— aguardando o JavaScript —</pre>
+    </section>
+
+    <!-- 3 -->
+    <section class="bloco" id="guardar">
+      <p class="eyebrow">Etapa 3 · A mágica</p>
+      <h2>Guardar no navegador — <code>setItem</code></h2>
+      <p><code>localStorage.setItem("chave", "valor")</code> grava um texto <strong>no
+        computador</strong>, não na página. Depois de rodar, aperte <kbd>F5</kbd> quantas
+        vezes quiser: o dado continua lá. É a primeira vez que algo seu sobrevive ao refresh.</p>
+      <pre class="saida" id="saida3">— aguardando o JavaScript —</pre>
+    </section>
+
+    <!-- 4 -->
+    <section class="bloco" id="ler">
+      <p class="eyebrow">Etapa 4 · A armadilha</p>
+      <h2>Ler — <code>getItem</code> (e o <code>null</code>)</h2>
+      <p><code>getItem</code> devolve o texto guardado — ou <strong><code>null</code></strong>
+        quando a chave não existe, <strong>sem dar erro</strong>. Lembra do
+        <code>undefined</code> dos objetos? Mesma armadilha, outro nome.</p>
+      <pre class="saida" id="saida4">— aguardando o JavaScript —</pre>
+    </section>
+
+    <!-- 5 -->
+    <section class="bloco" id="objetosalvo">
+      <p class="eyebrow">Etapa 5 · O coração da aula</p>
+      <h2>Guardar um objeto inteiro</h2>
+      <p>O localStorage só aceita texto — então o JSON entra em campo. Decore o par:
+        <strong>guardar</strong> = <code>setItem</code> + <code>stringify</code> ·
+        <strong>ler</strong> = <code>getItem</code> + <code>parse</code>.</p>
+      <pre class="saida" id="saida5">— aguardando o JavaScript —</pre>
+    </section>
+
+    <!-- 6 -->
+    <section class="bloco" id="nulo">
+      <p class="eyebrow">Etapa 6 · Nível intermediário</p>
+      <h2>E se não tiver nada salvo?</h2>
+      <p>Todo app faz essa pergunta ao abrir: <strong>tem algo salvo?</strong> Se
+        <code>getItem</code> devolver <code>null</code>, é a primeira visita — use um
+        valor padrão. É um <code>if</code> que você já sabe fazer.</p>
+      <pre class="saida" id="saida6">— aguardando o JavaScript —</pre>
+    </section>
+
+    <!-- 7 -->
+    <section class="bloco" id="lista">
+      <p class="eyebrow">Etapa 7 · Nível avançado</p>
+      <h2>Lista de objetos salva</h2>
+      <p>O pedido inteiro da lanchonete — uma <strong>lista de objetos</strong> — também vira
+        texto com o mesmo <code>stringify</code>. Salve, leia de volta e some o total com o
+        <code>for</code> da aula passada. É o esqueleto de um carrinho de compras real.</p>
+      <pre class="saida" id="saida7">— aguardando o JavaScript —</pre>
+    </section>
+
+    <!-- PROJETO -->
+    <section class="bloco destaque" id="projeto">
+      <p class="eyebrow">Projeto final</p>
+      <h2>Perfil que lembra de você</h2>
+      <p>Salve seu nome e curso, <strong>aperte F5</strong> e veja a página te reconhecer —
+        igual aos apps que dizem "Bem-vindo de volta". O botão <em>Esquecer</em> apaga tudo
+        (<code>removeItem</code>).</p>
+
+      <div class="form-calc">
+        <label for="nome">Nome
+          <input type="text" id="nome" name="nome" placeholder="Ex: Duda"></label>
+        <label for="curso">Curso
+          <input type="text" id="curso" name="curso" placeholder="Ex: Programação"></label>
+      </div>
+      <div class="botoes">
+        <button type="button" id="btn-salvar">Salvar perfil</button>
+        <button type="button" id="btn-esquecer" class="secundario">Esquecer</button>
+      </div>
+
+      <pre class="saida" id="resultado">— aguardando o JavaScript —</pre>
+    </section>
+
+    <!-- FECHAMENTO -->
+    <section class="bloco">
+      <p class="eyebrow">Fechamento</p>
+      <h2>O vocabulário da aula</h2>
+      <table class="tabela">
+        <tr><th>Termo</th><th>Em uma frase</th></tr>
+        <tr><td>JSON</td><td>Objeto escrito como texto — o formato que viaja pela internet.</td></tr>
+        <tr><td>stringify</td><td>Objeto → texto: <code>JSON.stringify(obj)</code>.</td></tr>
+        <tr><td>parse</td><td>Texto → objeto: <code>JSON.parse(texto)</code>.</td></tr>
+        <tr><td>setItem</td><td>Guarda um texto no navegador: <code>localStorage.setItem("chave", texto)</code>.</td></tr>
+        <tr><td>getItem</td><td>Lê o texto guardado — ou <code>null</code> se a chave não existe.</td></tr>
+        <tr><td>removeItem</td><td>Apaga uma chave salva.</td></tr>
+      </table>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <p>JSON e localStorage · Senac Largo Treze · Santo Amaro, São Paulo</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

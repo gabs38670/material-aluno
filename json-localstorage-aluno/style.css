@@ -1,0 +1,151 @@
+/* =====================================================================
+   TEMA — FUNÇÕES · ALUNO  ·  macOS (modo claro)
+   Linguagem visual Apple: tipografia do sistema, hairlines,
+   barra translúcida (vibrancy) e saída em janela de Terminal.
+   ===================================================================== */
+
+:root {
+  --azul: #0071e3;
+  --azul-hover: #0077ed;
+  --texto: #1d1d1f;
+  --texto-2: #6e6e73;
+  --hairline: #d2d2d7;
+  --fundo: #f5f5f7;
+  --cartao: #ffffff;
+  --cinza-suave: #f0f0f2;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+               "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.47;
+  color: var(--texto);
+  background: var(--fundo);
+  margin: 0;
+}
+
+.eyebrow {
+  font-size: .76rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
+  color: var(--texto-2); margin: 0 0 8px;
+}
+
+/* ---- Cabeçalho (hero) ---- */
+.topo { background: var(--cartao); border-bottom: 1px solid var(--hairline); }
+.topo-conteudo { max-width: 820px; margin: 0 auto; padding: 64px 24px 52px; text-align: center; }
+.topo h1 {
+  margin: 0 0 12px; font-size: 3rem; font-weight: 600; letter-spacing: -.025em; line-height: 1.05;
+}
+.topo .sub { margin: 0; font-size: 1.28rem; color: var(--texto-2); font-weight: 400; }
+.topo .eyebrow { color: var(--azul); }
+
+/* ---- Navegação translúcida (toolbar macOS) ---- */
+.menu {
+  position: sticky; top: 0; z-index: 20;
+  background: rgba(251, 251, 253, .72);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, .09);
+}
+.menu-conteudo {
+  max-width: 820px; margin: 0 auto; padding: 0 16px;
+  display: flex; flex-wrap: wrap; gap: 4px;
+}
+.menu a {
+  color: var(--texto); text-decoration: none; font-size: .82rem; font-weight: 400;
+  padding: 12px 12px; opacity: .82; transition: opacity .2s;
+}
+.menu a:hover { opacity: 1; color: var(--azul); }
+
+/* ---- Conteúdo ---- */
+main { max-width: 820px; margin: 0 auto; padding: 32px 24px 56px; }
+
+.bloco {
+  background: var(--cartao); border-radius: 18px;
+  padding: 30px 34px; margin: 20px 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .045);
+}
+.bloco.intro { background: transparent; box-shadow: none; padding: 8px 0 0; }
+.bloco.destaque { box-shadow: 0 6px 26px rgba(0, 113, 227, .12); }
+
+h2 {
+  color: var(--texto); font-size: 1.7rem; font-weight: 600; letter-spacing: -.02em;
+  margin: 0 0 14px; line-height: 1.15;
+}
+
+p { margin: 0 0 14px; color: #333336; }
+
+code {
+  background: var(--cinza-suave); color: var(--texto);
+  padding: 2px 7px; border-radius: 6px;
+  font-family: "SF Mono", ui-monospace, "Menlo", "Consolas", monospace; font-size: .88em;
+}
+kbd {
+  background: #fff; color: var(--texto); border: 1px solid var(--hairline);
+  border-bottom-width: 2px; padding: 1px 8px; border-radius: 6px;
+  font-size: .8em; font-family: "SF Mono", "Menlo", "Consolas", monospace;
+}
+
+.aviso {
+  background: var(--cinza-suave); border-radius: 14px;
+  padding: 16px 20px; margin: 0; color: #333336;
+}
+
+.caracteristicas { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; padding: 0; margin: 4px 0 18px; }
+.caracteristicas li {
+  background: var(--cinza-suave); color: var(--texto); padding: 14px 18px;
+  border-radius: 14px; font-weight: 600; flex: 1; min-width: 150px;
+}
+.caracteristicas small { display: block; color: var(--texto-2); font-weight: 400; font-size: .78rem; margin-top: 2px; }
+
+/* ---- Saída: janela de Terminal do macOS ---- */
+.saida {
+  position: relative;
+  background: #1e1e1e; color: #e8e8e8;
+  font-family: "SF Mono", ui-monospace, "Menlo", "Consolas", monospace;
+  font-size: .9rem; line-height: 1.6;
+  padding: 44px 20px 20px; border-radius: 12px; margin: 0;
+  white-space: pre-wrap; min-height: 60px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .18);
+}
+.saida::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 32px;
+  background: #323232; border-radius: 12px 12px 0 0;
+}
+.saida::after {
+  content: ""; position: absolute; top: 11px; left: 16px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: #ff5f57; box-shadow: 20px 0 #febc2e, 40px 0 #28c840;
+}
+
+/* ---- Formulário ---- */
+.form-calc { display: flex; flex-wrap: wrap; gap: 16px; margin: 18px 0 14px; }
+.form-calc label { display: flex; flex-direction: column; gap: 6px; font-size: .82rem; font-weight: 600; color: var(--texto-2); flex: 1; min-width: 160px; }
+.form-calc input {
+  padding: 11px 14px; border: 1px solid var(--hairline); border-radius: 10px;
+  font-size: 1.05rem; color: var(--texto); background: #fff; transition: border-color .15s, box-shadow .15s;
+}
+.form-calc input:focus { outline: none; border-color: var(--azul); box-shadow: 0 0 0 4px rgba(0, 113, 227, .15); }
+
+.botoes { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
+button {
+  background: var(--azul); color: #fff; border: none; padding: 11px 22px;
+  border-radius: 12px; font-size: .96rem; font-weight: 500; cursor: pointer;
+  font-family: inherit; transition: background .15s, transform .08s;
+}
+button:hover { background: var(--azul-hover); }
+button:active { transform: scale(.98); }
+button.secundario { background: rgba(0, 0, 0, .05); color: var(--azul); }
+button.secundario:hover { background: rgba(0, 0, 0, .08); }
+
+/* ---- Tabela (estilo lista do macOS) ---- */
+.tabela { border-collapse: collapse; width: 100%; margin: 6px 0 0; }
+.tabela th, .tabela td { text-align: left; padding: 13px 8px; border-bottom: 1px solid var(--hairline); }
+.tabela th { color: var(--texto-2); font-weight: 600; font-size: .82rem; text-transform: uppercase; letter-spacing: .03em; }
+.tabela tr:last-child td { border-bottom: none; }
+
+.rodape { text-align: center; color: var(--texto-2); font-size: .82rem; padding: 40px 24px; border-top: 1px solid var(--hairline); }
+.rodape p { margin: 0; color: var(--texto-2); }
